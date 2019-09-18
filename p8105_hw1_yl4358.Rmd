@@ -5,6 +5,8 @@ date: "9/17/2019"
 output: github_document
 ---
 
+Following chunks are solutions for problem 1.
+
 ```{r problem1}
 library(tidyverse)
 
@@ -17,11 +19,13 @@ first_df = tibble(
 )
 
 ```
+
 The mean of the sample is `r mean(pull(first_df, sample))`
 
 The mean of vec_log is `r mean(pull(first_df, vec_log))`
 
 We cannot take the mean of character vector and factor vector.
+
 
 ```{r pb1_convert_var_type}
 as.numeric(pull(first_df, vec_log)) * pull(first_df, sample)
@@ -29,4 +33,19 @@ as.factor(pull(first_df, vec_log)) * pull(first_df, sample)
 as.numeric(as.factor(pull(first_df, vec_log))) * pull(first_df, sample)
 
 ```
+
+
+Following chunks are solutions for problem 2
+
+```{r problem 2}
+second_df = tibble(
+  x = rnorm(500),
+  y = rnorm(500),
+  vec_log2 = (x + y) > 1,
+  vec_num = as.numeric(vec_log2),
+  vec_factor = as.factor(vec_log2)
+)
+
+```
+
 
