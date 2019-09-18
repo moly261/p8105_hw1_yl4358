@@ -5,7 +5,7 @@ date: "9/17/2019"
 output: github_document
 ---
 
-Following chunks are solutions for problem 1.
+# Problem 1
 
 ```{r problem1}
 library(tidyverse)
@@ -35,7 +35,7 @@ as.numeric(as.factor(pull(first_df, vec_log))) * pull(first_df, sample)
 ```
 
 
-Following chunks are solutions for problem 2
+# Problem 2
 
 ```{r problem 2}
 second_df = tibble(
@@ -47,5 +47,14 @@ second_df = tibble(
 )
 
 ```
+
+* The dataset has `r nrow(second_df)` rows and `r ncol(second_df)` columns
+
+* The mean, median and standard deviation of x is `r mean(pull(second_df, x))`, `r median(pull(second_df, x))`, `r sd(pull(second_df, x))`
+
+* The proportion of cases for which x + y > 1 is `r sum(pull(second_df, vec_num))/500`
+
+
+
 
 
