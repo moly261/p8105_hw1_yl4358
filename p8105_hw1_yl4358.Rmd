@@ -7,6 +7,8 @@ output: github_document
 
 ```{r problem1}
 library(tidyverse)
+
+set.seed(1)
 first_df = tibble(
   sample = rnorm(8),
   vec_log = sample > 0,
@@ -20,3 +22,8 @@ The mean of the sample is `r mean(pull(first_df, sample))`
 The mean of vec_log is `r mean(pull(first_df, vec_log))`
 
 We cannot take the mean of character vector and factor vector.
+
+```{r}
+
+```
+
