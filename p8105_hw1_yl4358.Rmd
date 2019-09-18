@@ -5,3 +5,13 @@ date: "9/17/2019"
 output: github_document
 ---
 
+```{r problem1}
+library(tidyverse)
+first_df = tibble(
+  sample = rnorm (8),
+  vec_log = sample > 0,
+  vec_char = c("My", "name", "is", "YI", "LIU", "and", "study", "biostatistics"),
+  vec_factor = factor(c("high", "medium", "low", "high", "medium", "low", "low", "low"))
+)
+```
+
